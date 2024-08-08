@@ -99,5 +99,5 @@ def simplify(equation: str):
     coef = lcoef_sum - rcoef_sum
     add = lf_adds_sum - rf_adds_sum
 
-    return f"{coef}x+{add}=0"
+    return coef, add
 
