@@ -69,6 +69,11 @@ def delete_empties(obj: list):
     return result
     
 
+def find_brackets(expression: str):
+
+    pass
+
+
 
 def simplify(equation: str):
 
@@ -88,12 +93,11 @@ def simplify(equation: str):
 
     lcoefs, lf_adds, rcoefs, rf_adds = map(delete_empties, [lcoefs, lf_adds, rcoefs, rf_adds])
 
-    lcoef_sum = sum_eval(lcoefs)
-    rcoef_sum = sum_eval(rcoefs)
+    # coefficient on every side
+    lcoef_sum, rcoef_sum = map(sum_eval, [lcoefs, rcoefs])
 
-    # left addendums
-    lf_adds_sum = sum_eval(lf_adds)
-    rf_adds_sum = sum_eval(rf_adds)
+    # addendum on every side
+    lf_adds_sum, rf_adds_sum = map(sum_eval, [lf_adds, rf_adds])
 
     # final coefficient and final addendum
     coef = lcoef_sum - rcoef_sum
