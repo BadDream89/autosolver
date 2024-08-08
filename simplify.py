@@ -13,7 +13,8 @@ def find_members(expression: str) -> list:
     expression = expression.split("-")
     workspace = expression.copy()
 
-    print(workspace)
+    
+    #print(workspace)
 
     is_empty_first = 0
     for key, part in enumerate(expression):
@@ -99,7 +100,4 @@ def simplify(equation: str):
     add = lf_adds_sum - rf_adds_sum
 
     return f"{coef}x+{add}=0"
-
-simplified = simplify(" -9x + 3x - 0 =-12")
-print(simplified)
 
